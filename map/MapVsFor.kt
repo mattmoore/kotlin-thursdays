@@ -27,4 +27,11 @@ fun main() {
 
   // map
   println(getAuthorsWithMap(books))
+
+  // Now, I want to get author for a specific book.
+  // "Folding functions (map/filter/etc)" allow me to do this:
+  println(
+      books.filter { it.title == "Kotlin in Action" }
+           .map { it.author }
+  )
 }
